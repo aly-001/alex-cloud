@@ -15,33 +15,33 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <style></style>
-  
-  <body style="padding: 5rem">
-    <div class="collapsible collapsible--expanded">
-      <header class="collapsible__header ">
-        <h2 class="collapsible__heading">Heading 1</h2>
-          <img src="images/chevron.svg" alt="" class="chevron collapsible__chevron" />
-      </header>
-      <div class="collapsible__content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam cum
-          amet quis nemo assumenda impedit. Magni ipsa ullam sint velit!
-        </p>
-      </div>
-    </div>
 
-    <div class="collapsible collapsible--expanded">
-      <header class="collapsible__header ">
-        <h2 class="collapsible__heading">Heading 1</h2>
-          <img src="images/chevron.svg" alt="" class="chevron collapsible__chevron" />
-      </header>
-      <div class="collapsible__content">
+  <body>
+    <!-- white block (containing card) -->
+    <section class="block container">
+      <header class="block__header">
+        <h2 class="block__heading">Heading</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam cum
-          amet quis nemo assumenda impedit. Magni ipsa ullam sint velit!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          optio perspiciatis nemo quisquam doloribus incidunt deleniti praesentium
+          accusamus eum ipsa.
         </p>
+      </header>
+    </section>
+    <!-- dark block's content is inside container -->
+    <section class="block block--dark block--skewed-left">
+      <div class="container">
+        <header class="block__header">
+          <h2 class="block__heading">Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            optio perspiciatis nemo quisquam doloribus incidunt deleniti praesentium
+            accusamus eum ipsa.
+          </p>
+        </header>
       </div>
-    </div>
+    </section>
     <script src="js/main.js"></script>
   </body>
+  
 </html>
