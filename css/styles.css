@@ -216,10 +216,14 @@ a {
   padding: 2rem;
   margin: 1rem 0;
   border: 0;
+  outline: 0;
   border-radius: 40px;
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
+}
+.search--btn{
+  min-width: 62.5px;
 }
 .btn--primary {
   background: var(--color-primary);
@@ -247,6 +251,9 @@ a {
 .btn--accent:hover {
   background: var(--color-accent-light);
 }
+.btn--accent:active {
+  background: var(--color-accent);
+}
 .btn--outline {
   background-color: transparent;
   border: 2px solid var(--color-headings);
@@ -260,11 +267,30 @@ a {
   width: 100%;
   display: inline-block;
 }
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
   }
 }
+
+@media screen and (min-width: 761px) {
+  .search--btn::before {
+    content: ""; /* Empty content before the icon */
+  }
+  .search--btn::after {
+    content: "Search"; /* Text content after the icon */
+  }
+  .search--btn .icon{
+    margin-right: 1rem;
+  }
+}
+
 
 /* Inputs */
 
@@ -290,12 +316,16 @@ a {
 .input-group .input {
   border: none;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  flex-shrink: 1; /* Allow shrinking */
+  min-width: 0; /* Reset the minimum width */
+  padding: 1.5rem 0 1.5rem 3rem;
 }
 
 .input-group .btn {
   margin: 4px;
 }
+
+
 
 @media screen and (min-width: 1024px) {
   .input {
@@ -741,5 +771,38 @@ a {
   }
   .hero{
     padding-top: 0;
+  }
+}
+
+/* Domain Block*/
+
+.block-domain .input-group{
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2,5rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  /* ^^^ This is a good trick */
+}
+
+@media screen and (min-width: 768px){
+  .block-domain__prices{
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .block-domain__prices{
+    font-size: 1.8rem;
   }
 }
