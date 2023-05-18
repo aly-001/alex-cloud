@@ -263,6 +263,17 @@ a {
   background-color: var(--color-headings);
   color: #ffffff;
 }
+.btn--dark {
+  background-color: var(--color-headings);
+  
+  color: #ffffff;
+}
+.btn--dark:hover {
+  background-color: #ffffff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
 .btn--block {
   width: 100%;
   display: inline-block;
@@ -363,7 +374,17 @@ a {
   padding-left: 1rem;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
 /* Plans */
+
+.plan{
+  transition: transform .2s ease-out;
+}
 
 .plan__name {
   color: #fff;
@@ -407,6 +428,12 @@ a {
   right: 5%;
 }
 
+.plan:hover{
+  transform: scale(1.05);
+}
+
+
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -420,7 +447,12 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+  .plan--popular:hover{
+    transform: scale(1.15);
+  }
 }
+
+
 
 /* Media */
 
@@ -804,5 +836,22 @@ a {
 @media screen and (min-width: 1024px){
   .block-domain__prices{
     font-size: 1.8rem;
+  }
+}
+
+/* Plan Block */
+
+.block-plans .grid{
+  gap: 8rem 4rem;
+}
+
+.block-plans .card{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px){
+  .plan--popular{
+    transform: scale(1.1);
   }
 }
