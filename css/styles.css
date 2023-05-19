@@ -687,6 +687,7 @@ a {
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -698,10 +699,17 @@ a {
   color: #7b858b;
 }
 
+
 .block--dark h1,
 h2,
 h3 {
   color: #fff;
+}
+
+.block--light h1,
+h2,
+h3 {
+  color: var(--color-headings);
 }
 
 .block--skewed-right {
