@@ -22,6 +22,11 @@
 
 /* Typography */
 
+::selection{
+  background: var(--color-primary);
+  color: white;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -49,6 +54,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 p {
   margin-top: 0;
@@ -133,7 +139,7 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
+  
 }
 
 .list--inline .list__item {
@@ -145,6 +151,7 @@ a {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
   /* Make the tick image slightly larger: */
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -165,15 +172,18 @@ a {
   height: 40px;
 }
 
-.icon--primary {
+.icon--primary > use{
+  fill: var(--color-primary);
+}
+.icon--primary{
   fill: var(--color-primary);
 }
 
-.icon--white{
+.icon--white {
   fill: #fff;
 }
 
-.icon--small{
+.icon--small {
   width: 30px;
   height: 30px;
 }
@@ -188,8 +198,8 @@ a {
   align-items: center;
 }
 
-.icon-container--accent{
-    background: var(--color-accent);
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 .chevron {
@@ -222,7 +232,7 @@ a {
   white-space: nowrap;
   text-align: center;
 }
-.search--btn{
+.search--btn {
   min-width: 62.5px;
 }
 .btn--primary {
@@ -240,7 +250,7 @@ a {
   background: var(--color-secondary-light);
 }
 
-.btn--stretched{
+.btn--stretched {
   padding: 2rem 8rem;
 }
 
@@ -265,7 +275,7 @@ a {
 }
 .btn--dark {
   background-color: var(--color-headings);
-  
+
   color: #ffffff;
 }
 .btn--dark:hover {
@@ -297,11 +307,10 @@ a {
   .search--btn::after {
     content: "Search"; /* Text content after the icon */
   }
-  .search--btn .icon{
+  .search--btn .icon {
     margin-right: 1rem;
   }
 }
-
 
 /* Inputs */
 
@@ -335,8 +344,6 @@ a {
 .input-group .btn {
   margin: 4px;
 }
-
-
 
 @media screen and (min-width: 1024px) {
   .input {
@@ -382,8 +389,8 @@ a {
 
 /* Plans */
 
-.plan{
-  transition: transform .2s ease-out;
+.plan {
+  transition: transform 0.2s ease-out;
 }
 
 .plan__name {
@@ -428,11 +435,9 @@ a {
   right: 5%;
 }
 
-.plan:hover{
+.plan:hover {
   transform: scale(1.05);
 }
-
-
 
 @media screen and (min-width: 1024px) {
   .plan__name {
@@ -447,17 +452,16 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
-  .plan--popular:hover{
+  .plan--popular:hover {
     transform: scale(1.15);
   }
 }
-
-
 
 /* Media */
 
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 .media__title {
   margin-top: 0;
@@ -539,8 +543,8 @@ a {
 
 /* Testimonials */
 
-.testimonial .card{
-  overflow:visible;
+.testimonial .card {
+  overflow: visible;
 }
 .testimonial {
   padding: 4rem;
@@ -553,39 +557,39 @@ a {
 .testimonial__image > img {
   width: 100%;
 }
-.testimonial .icon-container{
+.testimonial .icon-container {
   position: absolute;
   height: 80px;
   width: 80px;
   top: -3rem;
   right: -2.8rem;
 }
-.testimonial .icon{
+.testimonial .icon {
   height: 40px;
   width: 40px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .testimonial .quote,
-  .testimonial .quote__author{
+  .testimonial .quote__author {
     font-size: 2.4rem;
   }
-  .testimonial .quote{
+  .testimonial .quote {
     margin-left: 6rem;
   }
-  .testimonial{
+  .testimonial {
     padding: 3rem;
   }
-  .testimonial .icon-container{
+  .testimonial .icon-container {
     height: 64px;
     width: 64px;
   }
-  .testimonial__image  .icon-container {
+  .testimonial__image .icon-container {
     position: absolute;
     top: 3rem;
     right: -32px;
   }
-  .testimonial .icon{
+  .testimonial .icon {
     height: 30px;
     width: 30px;
   }
@@ -593,232 +597,229 @@ a {
 
 /* Callouts */
 
-.callout{
+.callout {
   padding: 4rem;
 }
 
-.callout--primary{
+.callout--primary {
   background: var(--color-primary);
   color: #fff;
-  
 }
 
-.callout__heading{
+.callout__heading {
   color: #fff;
   margin-top: 0;
   font-size: 3rem;
 }
 
-.callout .btn{
+.callout .btn {
   justify-self: center;
   align-self: center;
 }
 
-.callout__content{
+.callout__content {
   text-align: center;
 }
 
-@media screen and (min-width: 768px){
-  .callout .grid--1x2{
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
-  .callout__content{
+  .callout__content {
     text-align: left;
   }
-  .callout .btn{
+  .callout .btn {
     justify-self: start;
     margin: 0 2rem;
   }
 }
 
-@media screen and (min-width: 1024px){
-  .callout .grid--1X2{
+@media screen and (min-width: 1024px) {
+  .callout .grid--1X2 {
     grid-template-columns: 3fr 2fr;
   }
-
 }
 
 /* Collapsibles */
 
-.collapsible__header{
+.collapsible__header {
   display: flex;
   justify-content: space-between;
 }
-.collapsible__heading{
+.collapsible__heading {
   margin-top: 0;
   font-size: 3rem;
-  
 }
 
-.collapsible__chevron{
+.collapsible__chevron {
   transform: rotate(-90deg);
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
-.collapsible__content{
+.collapsible__content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all, .3s;
+  transition: all, 0.3s;
 }
 
-.collapsible--expanded .collapsible__chevron{
+.collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
 }
 
-.collapsible--expanded .collapsible__content{
+.collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
 }
 
 /* Blocks */
 
-.container{
+.container {
   /* put white blocks and dark blocks' content in here */
   max-width: 1140px;
   margin: 0 auto;
 }
 
-.block{
+.block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
 }
 
-.block__header{
+.block__header {
   text-align: center;
 }
 
-.block__heading{
+.block__heading {
   margin-top: 0;
 }
 
-.block--dark{
+.block--dark {
   background: black;
-  color: #7b858b
+  color: #7b858b;
 }
 
-.block--dark .block__heading{
+.block--dark h1,
+h2,
+h3 {
   color: #fff;
 }
 
-.block--skewed-right{
+.block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
-.block--skewed-left{
+.block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /* Navigation Bars */
 
-.nav{
+.nav {
   background: #000;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 1rem;
-  align-items:center;
+  align-items: center;
 }
 
-.nav__list{
+.nav__list {
   width: 100%;
   margin: 0;
 }
 
-.nav__item{
-  padding: .5rem 2rem;
+.nav__item {
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid #222;
-  
 }
 
-.nav__item > a{
+.nav__item > a {
   color: #d2d0db;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
-.nav__item > a:hover{
+.nav__item > a:hover {
   color: #fff;
 }
 
-.nav__toggler{
-  opacity: .7;
-  transition: box-shadow .15s;
+.nav__toggler {
+  opacity: 0.7;
+  transition: box-shadow 0.15s;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.nav__toggler:hover{
-  opacity: .73;
+.nav__toggler:hover {
+  opacity: 0.73;
 }
 
-#shitty-margin{
+#shitty-margin {
   transform: translateY(5px);
 }
 
-.nav.collapsible--expanded .nav__toggler{
+.nav.collapsible--expanded .nav__toggler {
   opacity: 1;
   box-shadow: 0 0 0 3px #797979;
-  
 }
 
-@media screen and (min-width: 768px){
-  .nav__toggler{
+@media screen and (min-width: 768px) {
+  .nav__toggler {
     display: none;
   }
-  .nav__list{
+  .nav__list {
     width: auto;
     display: flex;
     font-size: 1.6rem;
     max-height: 100%;
     opacity: 1;
   }
-  .nav__item{
+  .nav__item {
     border: 0;
   }
 }
 
 /* Hero */
 
-.hero{
+.hero {
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-.hero__tagline{
+.hero__tagline {
   font-size: 2rem;
-  color: #AAB0B8;
+  color: #aab0b8;
   letter-spacing: 1px;
   margin: 2rem 0 5rem;
 }
 
-.hero__image{
+.hero__image {
   width: 100%;
 }
 
-@media screen and (min-width: 768px){
-  .hero__content{
+@media screen and (min-width: 768px) {
+  .hero__content {
     text-align: left;
     align-self: center;
   }
-  .hero{
+  .hero {
     padding-top: 0;
   }
 }
 
 /* Domain Block*/
 
-.block-domain .input-group{
+.block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
   margin: 4rem auto;
   max-width: 670px;
 }
 
-.block-domain__prices{
+.block-domain__prices {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2,5rem);
+  grid-template-rows: repeat(2, 5rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
@@ -827,61 +828,83 @@ a {
   /* ^^^ This is a good trick */
 }
 
-@media screen and (min-width: 768px){
-  .block-domain__prices{
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
 
-@media screen and (min-width: 1024px){
-  .block-domain__prices{
+@media screen and (min-width: 1024px) {
+  .block-domain__prices {
     font-size: 1.8rem;
   }
 }
 
 /* Plan Block */
 
-.block-plans .grid{
+.block-plans .grid {
   gap: 8rem 4rem;
 }
 
-.block-plans .card{
+.block-plans .card {
   max-width: 500px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px){
-  .plan--popular{
+@media screen and (min-width: 1024px) {
+  .plan--popular {
     transform: scale(1.1);
   }
 }
 
 /* Features */
 
-.feature{
+.feature {
   gap: 4rem 2rem;
   margin: 12rem 0;
 }
 
-.feature:first-of-type{
+.feature:first-of-type {
   margin-top: 6rem;
 }
 
-.feature__heading{
+.feature__heading {
   margin-top: 1rem 0;
 }
 
-.feature__image > img{
+.feature__image > img {
   display: block;
   width: 100%;
 }
 
-.feature__image{
+.feature__image {
   width: 100%;
 }
 
-@media screen and (min-width: 768px){
-  .feature:nth-of-type(even) .feature__content{
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+
+
+/* Showcase Block */
+
+.block-showcase__image > img{
+  width: 100%;
+}
+
+/* Need to make the image not responsive for wider screens */
+
+@media screen and (min-width: 768px){
+  .block-showcase .grid{
+    grid-template-columns: 50% 50%;
+  }
+  .block-showcase__image{
+    justify-self:end;
+  }
+  .block-showcase__image > img{
+    width: auto;
+    max-width: 700px;
   }
 }
