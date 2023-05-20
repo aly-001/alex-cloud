@@ -817,6 +817,12 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1040px) {
+  .hero{
+    height: 800px;
+  }
+}
+
 /* Domain Block*/
 
 .block-domain .input-group {
