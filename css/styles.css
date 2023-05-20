@@ -22,7 +22,7 @@
 
 /* Typography */
 
-::selection{
+::selection {
   background: var(--color-primary);
   color: white;
 }
@@ -139,7 +139,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  
 }
 
 .list--inline .list__item {
@@ -172,10 +171,10 @@ a {
   height: 40px;
 }
 
-.icon--primary > use{
+.icon--primary > use {
   fill: var(--color-primary);
 }
-.icon--primary{
+.icon--primary {
   fill: var(--color-primary);
 }
 
@@ -690,6 +689,10 @@ a {
   margin-bottom: 4rem;
 }
 
+.block__header > h2 {
+  color: var(--color-headings)
+}
+
 .block__heading {
   margin-top: 0;
 }
@@ -698,7 +701,6 @@ a {
   background: black;
   color: #7b858b;
 }
-
 
 .block--dark h1,
 h2,
@@ -895,24 +897,121 @@ h3 {
   }
 }
 
-
 /* Showcase Block */
 
-.block-showcase__image > img{
+.block-showcase__image > img {
   width: 100%;
+}
+.block-showcase h2,.block-showcase h3{
+  color: #fff;
 }
 
 /* Need to make the image not responsive for wider screens */
 
-@media screen and (min-width: 768px){
-  .block-showcase .grid{
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
     grid-template-columns: 50% 50%;
   }
-  .block-showcase__image{
-    justify-self:end;
+  .block-showcase__image {
+    justify-self: end;
   }
-  .block-showcase__image > img{
+  .block-showcase__image > img {
     width: auto;
     max-width: 700px;
   }
 }
+
+/* Footer */
+
+.footer {
+  background: #232323;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.footer a{
+  color: #777;
+  transition: color .3s;
+}
+
+.footer a:hover{
+  color: #fff;
+}
+
+.footer__section .list{
+  margin: 0;
+}
+
+.footer__brand > img{
+  width: 100%;
+  max-width: 250px;
+  min-width: 200px;
+}
+
+.footer h2, .footer h3{
+  color: #fff;
+}
+
+
+@media screen and (min-width: 768px){
+  .footer__sections {
+    display: grid;
+    grid-template-columns:  2fr 1fr 1fr 1fr 1fr;
+  }
+  .footer .collapsible__chevron{
+    display: none;
+  }
+  .footer .collapsible__content{
+    opacity: 1;
+    max-height: 100%;
+  }
+  .footer__brand{
+    order: -1;
+    margin-top: 1rem;
+  }
+  .footer__copyright{
+    font-size: 1.5rem;
+  }
+  .footer__section{
+    border: none;
+    padding: 1rem;
+  }
+  .footer__heading{
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1040px){
+  .callout__container{
+    height: 200px;
+    position:relative;
+  }
+  
+  .pop-out{
+    position: absolute;
+    top:  45px;
+  }
+}
+
