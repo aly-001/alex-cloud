@@ -1,6 +1,6 @@
 :root {
   --color-primary: #635bff;
-  --color-secondary: #9d7dff;
+  --color-secondary: rgb(131, 83, 255);
   --color-accent: #ee3f52;
   --color-headings: #0a2540;
   --color-body: #435366;
@@ -136,8 +136,8 @@ a {
   color: white;
 }
 
-.badge--extra{
-    background-color: var(--color-primary);
+.badge--extra {
+  background-color: var(--color-primary);
   color: white;
 }
 
@@ -749,7 +749,7 @@ h3 {
   color: white;
 }
 
-.block--dark p{
+.block--dark p {
   color: #c6ccd5;
 }
 
@@ -784,7 +784,7 @@ h3 {
   background: linear-gradient(
     90deg,
     rgba(124, 72, 255, 1) 0%,
-    rgba(200, 179, 255, 1) 100%
+    rgb(169, 135, 255) 100%
   );
   display: flex;
   justify-content: space-between;
@@ -793,11 +793,21 @@ h3 {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .nav {
+    background: rgb(124, 72, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(124, 72, 255, 1) 0%,
+      rgba(200, 179, 255, 1) 100%
+    );
+  }
+}
+
 .nav__list {
   width: 100%;
   margin: 0;
 }
-
 
 .nav__item {
   padding: 0.5rem 2rem;
@@ -830,7 +840,7 @@ h3 {
 
 .nav.collapsible--expanded .nav__toggler {
   opacity: 1;
-  box-shadow: 0 0 0 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -867,7 +877,24 @@ h3 {
   width: 100%;
 }
 
+.block--dark.hero {
+  background: rgb(124, 72, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(124, 72, 255, 1) 0%,
+    rgb(169, 135, 255) 100%
+  );
+}
+
 @media screen and (min-width: 768px) {
+  .block--dark.hero {
+    background: rgb(124, 72, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(124, 72, 255, 1) 0%,
+      rgba(200, 179, 255, 1) 100%
+    );
+  }
   .hero__content {
     text-align: left;
     align-self: center;
@@ -973,17 +1000,15 @@ h3 {
   color: #fff;
 }
 
-.block-showcase .icon-container{
+.block-showcase .icon-container {
   background-color: white;
 }
 
-
-@media screen and (max-width: 768px){
-  .block-showcase{
+@media screen and (max-width: 768px) {
+  .block-showcase {
     background: #8861ff;
   }
 }
-
 
 /* Need to make the image not responsive for wider screens */
 
@@ -1338,43 +1363,42 @@ h3 {
     top: 281px;
     right: -7px;
     z-index: 0;
-}
-#pink {
-  animation: pink-move 25s linear infinite;
-  background-color: #ff497d;
-  width: 280px;
-  height: 280px;
-  top: 146px;
-  right: 129px;
-  z-index: 1;
-}
-#orange {
-  background-color: #ffaa00;
-  animation: orange-move 15s linear infinite;
-  width: 130px;
-  height: 130px;
-  top: 202px;
-  right: 61px;
-  z-index: 2;
-}
+  }
+  #pink {
+    animation: pink-move 25s linear infinite;
+    background-color: #ff497d;
+    width: 280px;
+    height: 280px;
+    top: 146px;
+    right: 129px;
+    z-index: 1;
+  }
+  #orange {
+    background-color: #ffaa00;
+    animation: orange-move 15s linear infinite;
+    width: 130px;
+    height: 130px;
+    top: 202px;
+    right: 61px;
+    z-index: 2;
+  }
 
-#white1 {
-  transform: scale(0.4);
-  animation: white-move 7s linear infinite;
-  width: 367.5px;
-  height: 129px;
-  top: 315px;
-  right: 40px;
+  #white1 {
+    transform: scale(0.4);
+    animation: white-move 7s linear infinite;
+    width: 367.5px;
+    height: 129px;
+    top: 315px;
+    right: 40px;
+  }
+  #white2 {
+    animation: white-move 8s linear infinite;
+    width: 199px;
+    height: 199px;
+    top: 192px;
+    right: 177px;
+  }
 }
-#white2 {
-  animation: white-move 8s linear infinite;
-  width: 199px;
-  height: 199px;
-  top: 192px;
-  right: 177px;
-}
-}
-
 
 @media screen and (min-width: 900px) {
   .cloud-blocks {
@@ -1426,8 +1450,6 @@ h3 {
     right: 207px;
   }
 }
-
-
 
 .ipad-container {
   display: inline-block;
