@@ -1,6 +1,0 @@
-To finish Alex Cloud:
-
-1. Remove shadow from the ipad image in the showcase block.
-2. Play around with the highlight color for buttons.
-3. Play around with the coolors form the plans block.
-4. Fix the icons in the showcase block.
