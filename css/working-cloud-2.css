@@ -1,0 +1,135 @@
+@keyframes orange-move {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(20px);
+    }
+    40% {
+      transform: translateY(20px);
+    }
+    60% {
+      transform: translateX(-20px);
+    }
+    80% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes pink-move {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(20px);
+    }
+    40% {
+      transform: translateY(20px);
+    }
+    60% {
+      transform: translateX(-20px);
+    }
+    80% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes white-move {
+      0% {
+        transform: translateX(0);
+        transform: scale(1);
+      }
+      20% {
+        transform: translateX(5px);
+      }
+      40% {
+        transform: translateY(5px);
+        transform: scale(.9);
+      }
+      60% {
+        transform: translateX(-5px);
+      }
+      80% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  
+  
+  .cloud-blocks {
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+  .cloud-block {
+    border-radius: 300px;
+    opacity: 0.9;
+    position: absolute;
+  }
+  .white {
+      background: #ffffff;
+      width: 100px;
+      height: 100px;
+      z-index: 5;
+      opacity: .99;
+    }
+  
+  #blue {
+    animation: orange-move 15s linear infinite;
+    background-color: rgb(130 141 255);
+    width: 450px;
+    height: 200px;
+    top: 281px;
+    right: 119px;
+    z-index: 0;
+  }
+  #pink {
+    animation: pink-move 25s linear infinite;
+    background-color: #ff497d;
+    width: 280px;
+    height: 280px;
+    top: 152px;
+    right: 236px;
+    z-index: 1;
+  }
+  #orange {
+    background-color: #ffaa00;
+    animation: orange-move 15s linear infinite;
+    width: 130px;
+    height: 130px;
+    top: 202px;
+    right: 171px;
+    z-index: 2;
+  }
+  #purple {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    transform: scale(1);
+  }
+  
+  
+  #white1 {
+      transform: scale(.4);
+    animation: white-move 7s linear infinite;
+    width: 367.5px;
+    height: 129px;
+    top: 315px;
+    right: 162px;
+  }
+  #white2 {
+    animation: white-move 8s linear infinite;
+    width: 199px;
+    height: 199px;
+    top: 192px;
+    right: 277px;
+  }
+  

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes orange-move {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(100px);
+        }
+        40% {
+          transform: translateY(100px);
+        }
+        60% {
+          transform: translateX(-100px);
+        }
+        80% {
+          transform: translateY(-100px);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      @keyframes pink-move {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(100px);
+        }
+        40% {
+          transform: translateY(100px);
+        }
+        60% {
+          transform: translateX(-100px);
+        }
+        80% {
+          transform: translateY(-100px);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      
+
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        margin: 2rem;
+      }
+      .blocks {
+        height: 800px;
+        width: 800px;
+        position: relative;
+      }
+      .block {
+        border-radius: 100px;
+        opacity: 0.8;
+        position: absolute;
+      }
+      #blue {
+        background-color: rgb(130 141 255);
+        width: 225px;
+        height: 100px;
+        top: 328px;
+        right: 228px;
+        transform: scale(2);
+        z-index: 0;
+      }
+      #pink {
+        transform: scale(2.8);
+        /* animation: pink-move 8s linear infinite; */
+        background-color: #ff49f9;
+        width: 100px;
+        height: 100px;
+        top: 239px;
+        right: 325px;
+        
+        z-index: 1;
+      }
+      #orange {
+        background-color: #ffaa00;
+        /* animation: orange-move 10s linear infinite; */
+        width: 100px;
+        height: 100px;
+        top: 221px;
+        right: 183px;
+        transform: scale(1.3);
+        z-index: 2;
+      }
+      #purple {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        right: 0;
+        transform: scale(1);
+      }
+
+      .white {
+        background: white;
+        width: 100px;
+        height: 100px;
+        z-index: 5;
+        opacity: 1;
+      }
+      #white1 {
+        width: 245px;
+        height: 86px;
+        top: 336px;
+        right: 219px;
+        transform: scale(1.5);
+      }
+      #white2 {
+        width: 100px;
+        height: 100px;
+        top: 241px;
+        right: 325px;
+        transform: scale(1.99);
+      }
+
+      #orange-f {
+        background-color: #ffaa00;
+        width: 100px;
+        height: 100px;
+        top: 225px;
+        right: 186px;
+        transform: scale(1.5);
+        z-index: 2;
+      }
+
+      #white1-f {
+        width: 245px;
+        height: 86px;
+        top: 334px;
+        right: 219px;
+        transform: scale(1.3);
+      }
+
+      #white2-f {
+        width: 100px;
+        height: 100px;
+        top: 241px;
+        right: 325px;
+        transform: scale(1.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blocks">
+      <!-- <div class="image"><img src="images/218706.png" alt="" /></div> -->
+      <div class="block" id="blue"></div>
+      <div class="block" id="pink"></div>
+      <div class="block" id="orange"></div>
+      <div class="block white" id="white1"></div>
+      <div class="block white" id="white2"></div>
+    </div>
+  </body>
+</html>
