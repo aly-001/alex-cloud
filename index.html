@@ -46,7 +46,16 @@
             </p>
             <a class="btn btn--accent btn--stretched">Get Started</a>
           </header>
-
+          <div data-aos="zoom-in" style="padding-left: 100px">
+            <div class="cloud-blocks">
+                <!-- <div class="image"><img src="images/218706.png" alt="" /></div> -->
+                <div class="cloud-block" id="blue"></div>
+                <div class="cloud-block" id="pink"></div>
+                <div class="cloud-block" id="orange"></div>
+                <div class="cloud-block white" id="white1"></div>
+                <div class="cloud-block white" id="white2"></div>
+              </div>
+          </div>
         </div>
       </div>
     </section>
@@ -152,7 +161,7 @@
     <!-- Features Block -->
     <div class="block">
       <section class="block container">
-        <header class="block__header" data-aos="fade-right">
+        <header class="block__header">
           <h2>Host on the Cloud to Keep Growing</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
@@ -161,7 +170,7 @@
         </header>
       
         <article class="grid grid--1x2 feature">
-          <div class="feature__content" data-aos="fade-up">
+          <div class="feature__content" data-aos="fade-right">
             <span class="icon-container">
               <svg class="icon icon--primary">
                 <use xlink:href="images/sprite.svg#easy"></use>
@@ -175,7 +184,7 @@
             </p>
             <a class="link-arrow" href="#">Learn More</a>
           </div>
-          <div class="feature__image">
+          <div class="feature__image" data-aos="fade-up">
             <img src="images/easy@2x.jpg" alt="" />
           </div>
         </article>
@@ -240,95 +249,7 @@
           </div>
         </article>
     </div>
-      <section class="block container">
-        <header class="block__header" data-aos="fade-right">
-          <h2>Host on the Cloud to Keep Growing</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-            voluptatem?
-          </p>
-        </header>
       
-        <article class="grid grid--1x2 feature">
-          <div class="feature__content" data-aos="fade-up">
-            <span class="icon-container">
-              <svg class="icon icon--primary">
-                <use xlink:href="images/sprite.svg#easy"></use>
-              </svg>
-            </span>
-            <h3 class="feature__heading">Super Easy to Use</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              minus laborum qui fugiat magni nostrum reiciendis tenetur molestias,
-              vitae ipsa.
-            </p>
-            <a class="link-arrow" href="#">Learn More</a>
-          </div>
-          <div class="feature__image">
-            <img src="images/easy@2x.jpg" alt="" />
-          </div>
-        </article>
-      
-        <article class="grid grid--1x2 feature">
-          <div class="feature__content" data-aos="fade-up">
-            <span class="icon-container">
-              <svg class="icon icon--primary">
-                <use xlink:href="images/sprite.svg#computer"></use>
-              </svg>
-            </span>
-            <h3 class="feature__heading">Simply Fast Websites</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              minus laborum qui fugiat magni nostrum reiciendis tenetur molestias,
-              vitae ipsa.
-            </p>
-            <a class="link-arrow" href="#">Learn More</a>
-          </div>
-          <div class="feature__image">
-            <img src="images/fast@2x.jpg" alt="" />
-          </div>
-        </article>
-      
-        <article class="grid grid--1x2 feature">
-          <div class="feature__content" data-aos="fade-up">
-            <span class="icon-container">
-              <svg class="icon icon--primary">
-                <use xlink:href="images/sprite.svg#settings"></use>
-              </svg>
-            </span>
-            <h3 class="feature__heading">Wordpress Made Easy</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              minus laborum qui fugiat magni nostrum reiciendis tenetur molestias,
-              vitae ipsa.
-            </p>
-            <a class="link-arrow" href="#">Learn More</a>
-          </div>
-          <div class="feature__image">
-            <img src="images/wordpress@2x.jpg" alt="" />
-          </div>
-        </article>
-      
-        <article class="grid grid--1x2 feature">
-          <div class="feature__content" data-aos="fade-up">
-            <span class="icon-container">
-              <svg class="icon icon--primary">
-                <use xlink:href="images/sprite.svg#clock"></use>
-              </svg>
-            </span>
-            <h3 class="feature__heading">24/7 Expert Support</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              minus laborum qui fugiat magni nostrum reiciendis tenetur molestias,
-              vitae ipsa.
-            </p>
-            <a class="link-arrow" href="#">Learn More</a>
-          </div>
-          <div class="feature__image">
-            <img src="images/support@2x.jpg" alt="" />
-          </div>
-        </article>
-    </div>
     </section>
     <!-- Showcase Block --> 
     <section class="block block--dark block--skewed-right block-showcase block--backwards-gradient">
@@ -337,15 +258,17 @@
       </header>
       <div class="container grid grid--1x2">
         <picture class="block-showcase__image" data-aos="zoom-in-right"
-          ><img src="images/ipad_no_bg.png" alt=""
+          ><img src="images/ipad-final.png" alt="" style="padding: 0 2rem"
         /></picture>
         <ul class="list" data-aos="zoom-in-right">
           <li>
             <div class="media">
               <div class="media__image">
-                <svg class="icon icon--primary">
-                  <use xlink:href="images/sprite.svg#growth"></use>
-                </svg>
+                <div class="icon-container">
+                  <svg class="icon icon--accent">
+                    <use xlink:href="images/sprite.svg#growth"></use>
+                  </svg>
+                </div>
               </div>
               <div class="media__body">
                 <h3 class="media__title">Easy Start & Managed Updates</h3>
@@ -360,9 +283,11 @@
           <li>
             <div class="media">
               <div class="media__image">
-                <svg class="icon icon--primary">
-                  <use xlink:href="images/sprite.svg#wordpress"></use>
-                </svg>
+                <div class="icon-container">
+                  <svg class="icon icon--accent-pink">
+                    <use xlink:href="images/sprite.svg#wordpress"></use>
+                  </svg>
+                </div>
               </div>
               <div class="media__body">
                 <h3 class="media__title">Staging, GIT & WP-CLI</h3>
@@ -377,9 +302,11 @@
           <li>
             <div class="media">
               <div class="media__image">
-                <svg class="icon icon--primary">
-                  <use xlink:href="images/sprite.svg#growth"></use>
-                </svg>
+                <div class="icon-container">
+                  <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite.svg#growth"></use>
+                  </svg>
+                </div>
               </div>
               <div class="media__body">
                 <h3 class="media__title">Dynamic Caching & More</h3>
@@ -449,7 +376,7 @@
               excepturi!
             </p>
           </div>
-          <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
+          <a href="#" class="btn btn--accent btn--stretched">Get Started</a>
         </div>
       </div>
     </div>

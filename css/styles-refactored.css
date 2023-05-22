@@ -1,15 +1,15 @@
 :root {
   --color-primary: #635bff;
-  --color-secondary: #00d4ff;
+  --color-secondary: #9d7dff;
   --color-accent: #ff497d;
   --color-headings: #0a2540;
   --color-body: #435366;
-  --color-shade: #f7f9fc;
+  --color-shade: #fff;
   --color-block-dark: rgb(124, 72, 255);
 
-  --color-primary-light: #3e90fb;
-  --color-secondary-light: #28dfff;
-  --color-accent-light: #fd4e22;
+  --color-primary-light: #736bfd;
+  --color-secondary-light: #010101;
+  --color-accent-light: #ff628e;
   --color-body-dark: #5c5577;
 
   --color-border: #ccc;
@@ -196,6 +196,14 @@ a {
 }
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--accent {
+  fill: rgb(201 111 0);
+}
+
+.icon--accent-pink {
+  fill: rgb(247, 0, 160);
 }
 
 .icon--white {
@@ -396,13 +404,13 @@ a {
 }
 
 .card--secondary .badge--secondary {
-  background: #02cdf1;
+  background: #926dff;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
 .card--primary .badge--primary {
-  background: #126de4;
+  background: #5b53ff;
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -622,7 +630,7 @@ a {
 }
 
 .callout--primary {
-  background: var(--color-primary);
+  background: var(--color-primary-light);
   color: #fff;
 }
 
@@ -741,6 +749,10 @@ h3 {
   color: white;
 }
 
+.block--dark p{
+  color: #c6ccd5;
+}
+
 .block--light h1,
 h2,
 h3 {
@@ -786,9 +798,10 @@ h3 {
   margin: 0;
 }
 
+
 .nav__item {
   padding: 0.5rem 2rem;
-  border-bottom: 1px solid #222;
+  border-bottom: 3px solid rgba(0,0,0,.2);
 }
 
 .nav__item > a {
@@ -817,7 +830,7 @@ h3 {
 
 .nav.collapsible--expanded .nav__toggler {
   opacity: 1;
-  box-shadow: 0 0 0 3px #797979;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -959,6 +972,18 @@ h3 {
 .block-showcase h3 {
   color: #fff;
 }
+
+.block-showcase .icon-container{
+  background-color: white;
+}
+
+
+@media screen and (max-width: 768px){
+  .block-showcase{
+    background: #8861ff;
+  }
+}
+
 
 /* Need to make the image not responsive for wider screens */
 
@@ -1133,7 +1158,7 @@ h3 {
 }
 
 .cloud-blocks {
-  height: 500px;
+  height: 300px;
   width: 100%;
   position: relative;
 }
@@ -1152,21 +1177,21 @@ h3 {
 }
 
 #blue {
-    animation: orange-move 15s linear infinite;
-    background-color: rgb(130 141 255);
-    width: 450px;
-    height: 200px;
-    top: 281px;
-    right: -62px;
-    z-index: 0;
+  animation: orange-move 15s linear infinite;
+  background-color: rgb(130 141 255);
+  width: 450px;
+  height: 250px;
+  top: 127px;
+  right: 46px;
+  z-index: 0;
 }
 #pink {
   animation: pink-move 25s linear infinite;
   background-color: #ff497d;
   width: 280px;
   height: 280px;
-  top: 152px;
-  right: 236px;
+  top: 39px;
+  right: 204px;
   z-index: 1;
 }
 #orange {
@@ -1174,35 +1199,28 @@ h3 {
   animation: orange-move 15s linear infinite;
   width: 130px;
   height: 130px;
-  top: 202px;
-  right: 171px;
+  top: 185px;
+  right: 121px;
   z-index: 2;
-}
-#purple {
-  width: 100px;
-  height: 100px;
-  top: 0;
-  right: 0;
-  transform: scale(1);
 }
 
 #white1 {
-    transform: scale(0.4);
-    animation: white-move 7s linear infinite;
-    width: 367.5px;
-    height: 129px;
-    top: 313px;
-    right: 66px;
+  transform: scale(0.4);
+  animation: white-move 7s linear infinite;
+  width: 367.5px;
+  height: 129px;
+  top: 284px;
+  right: 102px;
 }
 #white2 {
   animation: white-move 8s linear infinite;
   width: 199px;
   height: 199px;
-  top: 192px;
-  right: 277px;
+  top: 157px;
+  right: 207px;
 }
 
-@media screen and (min-width: 590px) {
+/* @media screen and (min-width: 590px) {
   #blue {
     animation: orange-move 15s linear infinite;
     background-color: rgb(130 141 255);
@@ -1253,9 +1271,14 @@ h3 {
     top: 192px;
     right: 277px;
   }
-}
+} */
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 590px) {
+  .cloud-blocks {
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
   #blue {
     animation: orange-move 15s linear infinite;
     background-color: rgb(130 141 255);
@@ -1299,4 +1322,116 @@ h3 {
     top: 192px;
     right: 207px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .cloud-blocks {
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+  #blue {
+    animation: orange-move 15s linear infinite;
+    background-color: rgb(130 141 255);
+    width: 450px;
+    height: 200px;
+    top: 281px;
+    right: -7px;
+    z-index: 0;
+}
+#pink {
+  animation: pink-move 25s linear infinite;
+  background-color: #ff497d;
+  width: 280px;
+  height: 280px;
+  top: 146px;
+  right: 129px;
+  z-index: 1;
+}
+#orange {
+  background-color: #ffaa00;
+  animation: orange-move 15s linear infinite;
+  width: 130px;
+  height: 130px;
+  top: 202px;
+  right: 61px;
+  z-index: 2;
+}
+
+#white1 {
+  transform: scale(0.4);
+  animation: white-move 7s linear infinite;
+  width: 367.5px;
+  height: 129px;
+  top: 315px;
+  right: 40px;
+}
+#white2 {
+  animation: white-move 8s linear infinite;
+  width: 199px;
+  height: 199px;
+  top: 192px;
+  right: 177px;
+}
+}
+
+
+@media screen and (min-width: 900px) {
+  .cloud-blocks {
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+  #blue {
+    animation: orange-move 15s linear infinite;
+    background-color: rgb(130 141 255);
+    width: 450px;
+    height: 200px;
+    top: 281px;
+    right: 59px;
+    z-index: 0;
+  }
+  #pink {
+    animation: pink-move 25s linear infinite;
+    background-color: #ff497d;
+    width: 280px;
+    height: 280px;
+    top: 152px;
+    right: 186px;
+    z-index: 1;
+  }
+  #orange {
+    background-color: #ffaa00;
+    animation: orange-move 15s linear infinite;
+    width: 130px;
+    height: 130px;
+    top: 202px;
+    right: 121px;
+    z-index: 2;
+  }
+
+  #white1 {
+    transform: scale(0.4);
+    animation: white-move 7s linear infinite;
+    width: 367.5px;
+    height: 129px;
+    top: 315px;
+    right: 102px;
+  }
+  #white2 {
+    animation: white-move 8s linear infinite;
+    width: 199px;
+    height: 199px;
+    top: 192px;
+    right: 207px;
+  }
+}
+
+
+
+.ipad-container {
+  display: inline-block;
+  width: auto;
+  border: 55px solid #323537;
+  border-radius: 56px;
 }
